@@ -8,3 +8,4 @@ flatpickr('#flatpickr', {
   allowInput: true,
 });
 console.log("ringo")
+console.log("main")//vscode-app/c:/Users/chiri/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html
