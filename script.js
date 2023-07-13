@@ -7,3 +7,4 @@ flatpickr('#flatpickr', {
   dateFormat: 'Y/m/d H:i',
   allowInput: true,
 });
+console.log("ringo")
