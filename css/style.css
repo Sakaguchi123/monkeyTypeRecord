@@ -21,7 +21,30 @@ h1 {
   border-radius: 0;
   border: none;
   outline: none;
+  width: 170px;
+  user-select: none;
+  transition: 0.25s ease-in-out;
+  position: relative;
+  border-bottom: 2px solid #d1d0c5;
 }
+
+#flatpickr:hover {
+  color: #e2b714;
+  border-bottom: 2px solid #e2b714;
+}
+
+.flatpickr-day.selected{
+  background: #e2b714;
+  border-color:#323437;
+}
+
+.flatpickr-day.selected:hover{
+  background: #e2b714;
+  border-color:white;
+}
+
+
+
 
 
 /* .material-symbols-outlined {
