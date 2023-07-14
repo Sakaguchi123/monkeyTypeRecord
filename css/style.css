@@ -14,7 +14,7 @@ h1 {
   font-weight: normal;      /*boldを消す*/
 }
 
-input , select {
+input, select {
   border: none;
   border-radius: 0;
   background-color: #323437;
@@ -25,7 +25,6 @@ input , select {
   font-size: 20px;
 }
 
-
 #flatpickr {
   margin: 80px 200px;
   width: 200px;
@@ -33,27 +32,15 @@ input , select {
   transition: 0.25s ease-in-out;
   position: relative;
 }
-
-#flatpickr:hover {
-  color: #e2b714;
-  border-bottom: 2px solid #e2b714;
-}
-
-.flatpickr-day.selected{
+/* カレンダーの選択した時の〇を黄色にする */
+.flatpickr-day.selected {
   background: #e2b714;
-  border-color:#323437;
 }
 
-.flatpickr-day.selected:hover{
+.flatpickr-day.selected:hover {
   background: #e2b714;
   border-color:white;
 }
-
-input[type="number"]::-webkit-outer-spin-button, 
-input[type="number"]::-webkit-inner-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
-} 
 
 #input-wpm {
   user-select: none;
@@ -62,12 +49,48 @@ input[type="number"]::-webkit-inner-spin-button {
   text-align: center;
 }
 
+/* number型のinputに出る上下矢印を削除する */
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+} 
+
 #select-time {
   margin: 50px;
 }
 
+/* hover処理 */
+#flatpickr:hover, #input-wpm:hover, 
+#select-time:hover { 
+  color: #e2b714;
+  border-bottom: 2px solid #e2b714;
+}
+
+#label-wpm:hover {
+  color: #e2b714;
+}
+
+#submit-button {
+  width: 90px;
+  height: 40px;
+  color: #d1d0c5;
+  background-color: #977a10;
+  font-family: inherit;
+  border-radius: 5px;
+}
+
+#submit-button:hover{
+  background-color: #a1851d;
+}
+
+.btn-shadow{
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
 
 
+/* googleマテリアルアイコンの設定 */
 /* .material-symbols-outlined {
   margin: 40px;
   font-size: 100px;
