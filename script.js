@@ -8,10 +8,11 @@ flatpickr('#flatpickr', {
   allowInput: true,
 });
 
-let inputDate = document.querySelector("#flatpickr");
-let inputWpm = document.querySelector("#input-wpm");
-let selectTime = document.querySelector("#select-time");
-let submitButton = document.querySelector("#submit-button");
+const inputDate = document.querySelector("#flatpickr");
+const inputWpm = document.querySelector("#input-wpm");
+const selectTime = document.querySelector("#select-time");
+const submitButton = document.querySelector("#submit-button");
+const ctx = document.getElementById("chart");
 
 let dateArr = [];
 let wpmArr = [];
@@ -39,6 +40,30 @@ submitButton.addEventListener("click",function() {
   }
 })
 //値がなかったら、null　もしあったら、
+
+
+let config  = new Chart(ctx, {
+  type: "line",
+  data: {
+    labels : [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+    ],
+    datasets : [{
+      label: "my first data set",
+      backgroundColor: 'rgb(255, 99, 132)',      
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 5, 2, 20, 30, 45],
+    }]
+  },
+  oputions:{}
+})
+
+
 
 
 // inputDate.addEventListener("change", change);
