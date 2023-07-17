@@ -8,7 +8,7 @@ flatpickr('#flatpickr', {
   allowInput: true,
 });
 
-// localStorage.clear();
+//localStorage.clear();
 
 const inputDate = document.querySelector("#flatpickr");
 const inputWpm = document.querySelector("#input-wpm");
@@ -97,7 +97,7 @@ let config  = new Chart(ctx, {
       label: "my first data set",
       backgroundColor: '#e2b714',      
       borderColor: '#e2b714',
-      data: [0, 10, 5, 2, 20, 30, 45],
+      data: JSON.parse(localStorage.getItem("submitWpm")),
     }]
   },
   options:{
@@ -109,7 +109,7 @@ let config  = new Chart(ctx, {
       },
       title: {
         display: true,
-        text: "wpms",
+        text: "wpm",
       },
     }
   }
