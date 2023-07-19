@@ -21,6 +21,9 @@ let dateArr = [];
 let wpmArr = [];
 let timeArr = [];
 
+
+
+
 //wpmに入力されていないときはclick出来ないようにする。
 inputWpm.addEventListener("input", function() {
   if (inputWpm.value === "") {
@@ -59,13 +62,15 @@ submitButton.addEventListener("click",function() {
   }
 
   inputWpm.value = ""; //ボタン押した後、wpmを空欄にする
+
 })
 
 //リスト表示
+
+
 let listGetDate = JSON.parse(localStorage.getItem("submitDate"));
 let listGetWpm = JSON.parse(localStorage.getItem("submitWpm"));
 let listGetTime = JSON.parse(localStorage.getItem("submitTime"));
-
 
 let i = 0;
 listGetDate.forEach((element) => {
