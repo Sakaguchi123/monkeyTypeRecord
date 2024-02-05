@@ -121,7 +121,7 @@ let config  = new Chart(ctx, {
 })
 
 
-
+console.log("git_test")
 
 
 // inputDate.addEventListener("change", change);
